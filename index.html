@@ -2,7 +2,7 @@
 Working list
 --------------------------
 Using MemSet in OSlice
-	- handle size of the memory access
+	- Now need to test the sliced output, see if the same as the previous (Set of CLPs) appraoch 
 CLP-AND operation
 	- find new delta for resulted CLP
 CLP filtering: predicates or more blocks - need math
@@ -13,6 +13,11 @@ Investigation of conti example for Store at T address (which clear all the addre
 INGORE_CONTROL in mkff
 
 
+Fixes and achievements
+--------------------------
+MemorySet: The area of removal.
+
+
 Questions
 --------------------------
 (1) Store to multiple address, i.e. store r2, [r3] where r3 = clp(b,d,m). If the range is under treshold - writes to all these addresses. Is this safe ?
@@ -21,6 +26,7 @@ Questions
 Answers
 --------------------------
 (1) Store to multiple address, i.e. store r2, [r3] where r3 = clp(b,d,m). Should memory be wiped out or just clear the target addresses? If the range is over-threshold, clear the covered area.
+
 
 Schedule
 --------------------------

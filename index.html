@@ -15,8 +15,12 @@ INGORE_CONTROL in mkff
 
 Questions
 --------------------------
-Store to multiple address, i.e. store r2, [r3] where r3 = clp(b,d,m). Should memory be wiped out or just clear the target addresses?
+(1) Store to multiple address, i.e. store r2, [r3] where r3 = clp(b,d,m). If the range is under treshold - writes to all these addresses. Is this safe ?
 
+
+Answers
+--------------------------
+(1) Store to multiple address, i.e. store r2, [r3] where r3 = clp(b,d,m). Should memory be wiped out or just clear the target addresses? If the range is over-threshold, clear the covered area.
 
 Schedule
 --------------------------
